@@ -6,6 +6,7 @@ public class gunScript : MonoBehaviour
 {
     public GameObject bulletPrefab; // the bullet prefab to instantiate
     public Transform firePoint;   //The point from where the bullet is fired
+    public AudioSource[] soundFX;
     // Update is called once per frame
     void Update()
     {
@@ -13,6 +14,7 @@ public class gunScript : MonoBehaviour
        if(Input.GetKeyDown(KeyCode.Space))
        {
         Shoot();
+        soundFX[0].Play();
        }   
 
     }
