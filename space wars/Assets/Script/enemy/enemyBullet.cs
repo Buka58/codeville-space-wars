@@ -27,6 +27,14 @@ public class enemyBullet : MonoBehaviour
         transform.Translate(Vector3.left * speed * Time.deltaTime);
     }
 
+private void OnTriggerEnter2D(Collider2D collision)
+{
+    if(collision.tag == "Border")
+    {
+        Destroy(this.gameObject);
+    }
+
+}
 
     void Deactivate()
     {
